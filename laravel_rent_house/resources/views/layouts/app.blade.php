@@ -6,6 +6,8 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Hotel Template">
+    <meta name="keywords" content="Hotel, unica, creative, html">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -18,6 +20,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="{{asset('storage/css/bootstrap.min.css')}}" type="text/css">--}}
+    <link rel="stylesheet" href="{{asset('storage/css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/flaticon.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/jquery-ui.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/nice-select.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/magnific-popup.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/slicknav.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/style.css')}}" type="text/css">
 </head>
 <body>
     <div id="app">
@@ -71,10 +82,17 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 </body>
+<script src="{{asset('storage/js/jquery-3.3.1.min.js')}}"></script>
+{{--<script src="{{asset('storage/js/bootstrap.min.js')}}"></script>--}}
+<script src="{{asset('storage/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('storage/js/jquery-ui.min.js')}}"></script>
+<script src="{{asset('storage/js/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('storage/js/jquery.slicknav.js')}}"></script>
+<script src="{{asset('storage/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('storage/js/main.js')}}"></script>
 </html>
