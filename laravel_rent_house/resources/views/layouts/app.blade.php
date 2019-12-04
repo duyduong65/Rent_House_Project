@@ -20,15 +20,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+{{--    <link rel="stylesheet" href="{{asset('storage/css/bootstrap.min.css')}}" type="text/css">--}}
+    <link rel="stylesheet" href="{{asset('storage/css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/flaticon.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/jquery-ui.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/nice-select.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/magnific-popup.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/slicknav.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('storage/css/style.css')}}" type="text/css">
 </head>
 <body>
     <div id="app">
@@ -82,18 +82,17 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 </body>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
+<script src="{{asset('storage/js/jquery-3.3.1.min.js')}}"></script>
+{{--<script src="{{asset('storage/js/bootstrap.min.js')}}"></script>--}}
+<script src="{{asset('storage/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('storage/js/jquery-ui.min.js')}}"></script>
+<script src="{{asset('storage/js/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('storage/js/jquery.slicknav.js')}}"></script>
+<script src="{{asset('storage/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('storage/js/main.js')}}"></script>
 </html>

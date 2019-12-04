@@ -1,6 +1,8 @@
 @extends('layouts.app')
-
 @section('content')
+
+
+
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -10,10 +12,39 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    <a href="./index.html"><img src="{{asset('storage/img/logo.png')}}" alt=""></a>
                 </div>
                 <div class="nav-right">
                     <a href="#" class="primary-btn">Make a Reservation</a>
+                </div>
+                <div class="navbar-right">
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Launch demo modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
@@ -38,7 +69,7 @@
     <!-- Header End -->
 
     <!-- Hero Area Section Begin -->
-    <section class="hero-area set-bg" data-setbg="img/hero-bg.jpg">
+    <section class="hero-area set-bg" data-setbg="{{asset('storage/img/hero-bg.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -61,12 +92,12 @@
                         <div class="datepicker">
                             <p>From</p>
                             <input type="text" class="datepicker-1" value="dd / mm / yyyy">
-                            <img src="img/calendar.png" alt="">
+                            <img src="{{asset('storage/img/calendar.png')}}" alt="">
                         </div>
                         <div class="datepicker">
                             <p>To</p>
                             <input type="text" class="datepicker-2" value="dd / mm / yyyy">
-                            <img src="img/calendar.png" alt="">
+                            <img src="{{asset('storage/img/calendar.png')}}" alt="">
                         </div>
                         <div class="room-quantity">
                             <div class="single-quantity">
@@ -133,7 +164,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="facilities-item set-bg" data-setbg="img/faci-1.jpg">
+                    <div class="facilities-item set-bg" data-setbg="{{asset('storage/img/faci-1.jpg')}}">
                         <div class="fi-title">
                             <h2>Luxury Suite Room</h2>
                             <p>From $399</p>
@@ -164,7 +195,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="facilities-item set-bg fi-right" data-setbg="img/faci-2.jpg">
+                    <div class="facilities-item set-bg fi-right" data-setbg="{{asset('storage/img/faci-2.jpg')}}">
                         <div class="fi-title">
                             <h2>Infinity Pool</h2>
                             <p>For all our guests</p>
@@ -203,7 +234,7 @@
                             sapien ac, ultrices rhoncus ipsum. Donec nec sapien in urna fermentum ornare.</p>
                         <div class="ti-author">
                             <div class="author-pic">
-                                <img src="img/author-1.png" alt="">
+                                <img src="{{asset('storage/img/author-1.png')}}" alt="">
                             </div>
                             <div class="author-text">
                                 <h6>JOHN DOE <span>Madrid</span></h6>
@@ -228,7 +259,7 @@
                             ultrices rhoncus ipsum. Donec nec sapien in urna fermentum ornare.</p>
                         <div class="ti-author">
                             <div class="author-pic">
-                                <img src="img/author-2.png" alt="">
+                                <img src="{{asset('storage/img/author-2.png')}}" alt="">
                             </div>
                             <div class="author-text">
                                 <h6>Maria Smith <span>Madrid</span></h6>
@@ -243,9 +274,9 @@
 
     <!-- Video Section Begin -->
     <div class="video-section">
-        <div class="video-bg set-bg" data-setbg="img/video-bg.jpg"></div>
+        <div class="video-bg set-bg" data-setbg="{{asset('storage/img/video-bg.jpg')}}"></div>
         <div class="container">
-            <div class="video-text set-bg" data-setbg="img/video-inside-bg.jpg">
+            <div class="video-text set-bg" data-setbg="{{asset('storage/img/video-inside-bg.jpg')}}">
                 <a href="https://www.youtube.com/watch?v=j56YlCXuPFU" class="pop-up"><i class="fa fa-play"></i></a>
             </div>
         </div>
@@ -272,22 +303,22 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="about-img">
-                                <img src="img/home-about-1.jpg" alt="">
+                                <img src="{{asset('storage/img/home-about-1.jpg')}}" alt="">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="about-img">
-                                <img src="img/home-about-2.jpg" alt="">
+                                <img src="{{asset('storage/img/home-about-2.jpg')}}" alt="">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="about-img">
-                                <img src="img/home-about-3.jpg" alt="">
+                                <img src="{{asset('storage/img/home-about-3.jpg')}}" alt="">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="about-img">
-                                <img src="img/home-about-4.jpg" alt="">
+                                <img src="{{asset('storage/img/home-about-4.jpg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -304,7 +335,7 @@
                 <div class="col-lg-4">
                     <div class="footer-item">
                         <div class="footer-logo">
-                            <a href="#"><img src="img/logo.png" alt=""></a>
+                            <a href="#"><img src="{{asset('storage/img/logo.png')}}" alt=""></a>
                         </div>
                         <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua.</p>
@@ -323,8 +354,8 @@
                     <div class="footer-item">
                         <h5>Contact Info</h5>
                         <ul>
-                            <li><img src="img/placeholder.png" alt="">1525 Boring Lane,<br/>Los Angeles, CA</li>
-                            <li><img src="img/phone.png" alt="">+1 (603)535-4592</li>
+                            <li><img src="{{asset('storage/img/placeholder.png')}}" alt="">1525 Boring Lane,<br/>Los Angeles, CA</li>
+                            <li><img src="{{asset('storage/img/phone.png')}}" alt="">+1 (603)535-4592</li>
                         </ul>
                     </div>
                 </div>
