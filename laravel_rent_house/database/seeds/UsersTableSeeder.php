@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
         $user = new User();
         $user->name = 'Hoang Thanh Bao';
-        $user->email = 'Bao987@gamil.com';
+        $user->email = 'Bao987@gmail.com';
         $user->phone = '0988746356';
         $user->password = 'bao12345';
         $user->dob = '1990/09/12';
@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
 
         $user = new User();
         $user->name = 'Trần Thanh Hà';
-        $user->email = 'Hà890@gamil.com';
+        $user->email = 'Hao890@gmail.com';
         $user->phone = '0988746356';
         $user->password = 'Ha112345';
         $user->dob = '1990/09/23';
@@ -41,7 +41,7 @@ class UsersTableSeeder extends Seeder
 
         $user = new User();
         $user->name = 'Nguyễn Nam';
-        $user->email = 'Nam1987@gamil.com';
+        $user->email = 'Nam1987@gmail.com';
         $user->phone = '0988746356';
         $user->password = 'Nambnb12345';
         $user->dob = '1990/10/12';
@@ -54,7 +54,7 @@ class UsersTableSeeder extends Seeder
 
         $user = new User();
         $user->name = 'Hoàng Thùy Linh';
-        $user->email = 'Linh987@gamil.com';
+        $user->email = 'Linh987@gmail.com';
         $user->phone = '0988746356';
         $user->password = 'avvhg12345';
         $user->dob = '1990/12/12';
