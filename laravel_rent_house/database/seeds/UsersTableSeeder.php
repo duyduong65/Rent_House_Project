@@ -14,9 +14,9 @@ class UsersTableSeeder extends Seeder
     {
         $user = new User();
         $user->name = 'Hoang Thanh Bao';
-        $user->email = 'Bao987@gmail.com';
+        $user->email = 'admin@gmail.com';
         $user->phone = '0988746356';
-        $user->password = 'bao12345';
+        $user->password = \Illuminate\Support\Facades\Hash::make('12345678');
         $user->dob = '1990/09/12';
         $user->idCard = 123456789;
         $user->gender = 'male';
@@ -28,9 +28,9 @@ class UsersTableSeeder extends Seeder
 
         $user = new User();
         $user->name = 'Trần Thanh Hà';
-        $user->email = 'Hao890@gmail.com';
+        $user->email = 'hao890@gmail.com';
         $user->phone = '0988746356';
-        $user->password = 'Ha112345';
+        $user->password = \Illuminate\Support\Facades\Hash::make('12345678');
         $user->dob = '1990/09/23';
         $user->idCard = 123456798;
         $user->gender = 'female';
@@ -41,9 +41,9 @@ class UsersTableSeeder extends Seeder
 
         $user = new User();
         $user->name = 'Nguyễn Nam';
-        $user->email = 'Nam1987@gmail.com';
+        $user->email = 'guest1@gmail.com';
         $user->phone = '0988746356';
-        $user->password = 'Nambnb12345';
+        $user->password = \Illuminate\Support\Facades\Hash::make('12345678');
         $user->dob = '1990/10/12';
         $user->idCard = 123453389;
         $user->gender = 'male';
