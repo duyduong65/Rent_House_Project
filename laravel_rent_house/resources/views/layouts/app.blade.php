@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{{asset('storage/css/magnific-popup.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('storage/css/slicknav.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('storage/css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     <div id="app">
