@@ -8,7 +8,8 @@
                     <img src="{{asset('storage/img/logonha.jpg')}}" style="height: 80%" alt="">
                 </div>
                 <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form">
+
+                    <form method="POST" action="{{route('houses.add')}}" class="register-form" id="register-form">
                         <h2>NEW HOUSES</h2>
                         <div class="form-row">
                             <div class="form-group">
@@ -26,7 +27,7 @@
                         </div>
                         <div class="form-group">
                             <label for="address">CITY :</label>
-                            <input type="text" name="city" id="address" required/>
+                            <input type="text" name="city_id" id="address" required/>
                         </div>
                         <div class="form-group">
                             <label for="address">ADDRESS :</label>
@@ -36,11 +37,11 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="state">NUMBER BEDROOM :</label>
-                                <input type="text" name="numberBedroom" id="name" required/>
+                                <input type="text" name="numBedroom" id="name" required/>
                             </div>
                             <div class="form-group">
                                 <label for="state">NUMBER BATHROOM :</label>
-                                <input type="text" name="numberBathroom" id="name" required/>
+                                <input type="text" name="numBathroom" id="name" required/>
                             </div>
                         </div>
 
