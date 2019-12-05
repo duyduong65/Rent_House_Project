@@ -19,4 +19,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
+<<<<<<< HEAD
 Route::get('/', 'HomeController@index')->name('home');
+=======
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('houses')->group(function () {
+    Route::get('/', 'HouseController@index')->name('houses.index');
+    Route::get('create', 'HouseController@create')->name('houses.create');
+    Route::post('add', 'HouseController@add')->name('houses.add');
+    Route::get('{id}/edit', 'HouseController@edit')->name('houses.edit');
+    Route::post('{id}/update', 'HouseController@update')->name('houses.update');
+    Route::get('{id}/delete}', 'HouseController@destroy')->name('houses.delete');
+    Route::get('search', 'HouseController@search')->name('houses.search');
+});
+>>>>>>> f05da722f1f3edd13c2c32d7e88ec130acdb3714

@@ -30,6 +30,13 @@
     <link rel="stylesheet" href="{{asset('storage/css/slicknav.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('storage/css/style.css')}}" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{asset('storage/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{asset('storage/css/css/style.css')}}">
+
 </head>
 <body>
 <div id="preloder">
@@ -506,5 +513,9 @@
 <script src="{{asset('storage/js/jquery.nice-select.min.js')}}"></script>
 <script src="{{asset('storage/js/jquery.slicknav.js')}}"></script>
 <script src="{{asset('storage/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('storage/js/main.js')}}"></script>
+
+<!-- JS -->
+<script src="{{asset('storage/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('storage/js/main.js')}}"></script>
 </html>
