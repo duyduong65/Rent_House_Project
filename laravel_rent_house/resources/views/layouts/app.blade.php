@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="{{asset('storage/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
 
 </head>
+<<<<<<< HEAD
 
 <body>
 <div id="preloder">
@@ -86,6 +87,69 @@
                                                     <input id="password" type="password"
                                                            class="form-control @error('password') is-invalid @enderror"
                                                            name="password" required autocomplete="current-password">
+=======
+<body>
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<!-- Header Section Begin -->
+<header class="header-section">
+    <div class="container-fluid">
+        <div class="inner-header">
+            <div class="logo">
+                <a href="{{route('home')}}"><img src="{{asset('storage/img/logo.png')}}" alt=""></a>
+            </div>
+            <div class="nav-right">
+                @guest
+                    <li class="nav-item">
+                        <button type="button" data-backdrop="false" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
+                            Login
+                        </button>
+
+                        <div class="modal fade" id="exampleModal" data-backdrop="false" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="POST" action="{{ route('login') }}">
+                                            @csrf
+
+                                            <div class="form-group row">
+                                                <label for="email"
+                                                       class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                                                <div class="col-md-6">
+                                                    <input id="email" type="email"
+                                                           class="form-control @error('email') is-invalid @enderror"
+                                                           name="email" value="{{ old('email') }}" required
+                                                           autocomplete="email" autofocus>
+
+                                                    @error('email')
+                                                    <span class="invalid-feedback" role="alert">
+                                                             <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="password"
+                                                       class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                                                <div class="col-md-6">
+                                                    <input id="password" type="password"
+                                                           class="form-control @error('password') is-invalid @enderror"
+                                                           name="password" required autocomplete="current-password">
+
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
                                                     @error('password')
                                                     <span class="invalid-feedback" role="alert">
                                                               <strong>{{ $message }}</strong>
@@ -93,18 +157,30 @@
                                                     @enderror
                                                 </div>
                                             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
                                             <div class="form-group row">
                                                 <div class="col-md-6 offset-md-4">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox"
                                                                name="remember"
                                                                id="remember" {{ old('remember') ? 'checked' : '' }}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
                                                         <label class="form-check-label" for="remember">
                                                             {{ __('Remember Me') }}
                                                         </label>
                                                     </div>
                                                 </div>
                                             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
                                             <div class="form-group row mb-0">
                                                 <div class="col-md-8 offset-md-4">
                                                     <button type="submit" class="btn btn-primary">
@@ -114,6 +190,7 @@
                                             </div>
                                         </form>
                                     </div>
+<<<<<<< HEAD
                                 </div>
                             </div>
                         </div>
@@ -345,6 +422,270 @@
                                     </div>
                                 </div>
                             </div>
+=======
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-link">
+                    @if (Route::has('register'))
+
+                        <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-success"
+                                    data-backdrop="false" data-toggle="modal"
+                                    data-target="#staticBackdrop">
+                                Register
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop"
+                                 data-backdrop="false" tabindex="-1"
+                                 role="dialog"
+                                 aria-labelledby="staticBackdropLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title"
+                                                id="staticBackdropLabel">
+                                                REGISTER</h5>
+                                            <button type="button" class="close"
+                                                    data-dismiss="modal"
+                                                    aria-label="Close">
+                                                                                        <span
+                                                                                            aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form method="POST"
+                                                  action="{{ route('register') }}">
+                                                @csrf
+
+                                                <div class="form-group row">
+                                                    <label for="name"
+                                                           class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                                                    <div class="col-6 col-md-6">
+                                                        <input id="name"
+                                                               type="text"
+                                                               class="form-control @error('name') is-invalid @enderror"
+                                                               name="name"
+                                                               value="{{ old('name') }}"
+                                                               required
+                                                               autocomplete="name"
+                                                               autofocus>
+
+                                                        @error('name')
+                                                        <span
+                                                            class="invalid-feedback"
+                                                            role="alert">
+                                                                                                     <strong>{{ $message }}</strong>
+                                                                                                </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="email"
+                                                           class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                                                    <div class="col-md-6">
+                                                        <input id="email"
+                                                               type="email"
+                                                               class="form-control @error('email') is-invalid @enderror"
+                                                               name="email"
+                                                               value="{{ old('email') }}"
+                                                               required
+                                                               autocomplete="email">
+
+                                                        @error('email')
+                                                        <span
+                                                            class="invalid-feedback"
+                                                            role="alert">
+                                                                                                   <strong>{{ $message }}</strong>
+                                                                                              </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="phone"
+                                                           class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
+
+                                                    <div class="col-6 col-md-6">
+                                                        <input id="phone"
+                                                               type="text"
+                                                               class="form-control @error('phone') is-invalid @enderror"
+                                                               name="phone"
+                                                               value="{{ old('phone') }}"
+                                                               required
+                                                               autocomplete="phone"
+                                                               autofocus>
+
+                                                        @error('phone')
+                                                        <span
+                                                            class="invalid-feedback"
+                                                            role="alert">
+                                                                                                     <strong>{{ $message }}</strong>
+                                                                                                </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="idCard"
+                                                           class="col-md-4 col-form-label text-md-right">{{ __('ID Card') }}</label>
+
+                                                    <div class="col-6 col-md-6">
+                                                        <input id="idCard"
+                                                               type="text"
+                                                               class="form-control @error('idCard') is-invalid @enderror"
+                                                               name="idCard"
+                                                               value="{{ old('idCard') }}"
+                                                               required
+                                                               autocomplete="idCard"
+                                                               autofocus>
+
+                                                        @error('idCard')
+                                                        <span
+                                                            class="invalid-feedback"
+                                                            role="alert">
+                                                                                                     <strong>{{ $message }}</strong>
+                                                                                                </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="dob"
+                                                           class="col-md-4 col-form-label text-md-right">{{ __('Date of birth') }}</label>
+
+                                                    <div class="col-6 col-md-6">
+                                                        <input id="dob"
+                                                               type="date"
+                                                               class="form-control @error('dob') is-invalid @enderror"
+                                                               name="dob"
+                                                               value="{{ old('dob') }}"
+                                                               required
+                                                               autocomplete="dob"
+                                                               autofocus>
+
+                                                        @error('dob')
+                                                        <span
+                                                            class="invalid-feedback"
+                                                            role="alert">
+                                                                                                     <strong>{{ $message }}</strong>
+                                                                                                </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="gender"
+                                                           class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
+
+                                                    <div class="col-6 col-md-6">
+                                                        <select class="custom-select my-1 mr-sm-2 @error('gender') is-invalid @enderror"
+                                                                name="gender"
+                                                                autocomplete="gender"
+                                                                autofocus
+                                                                id="gender">
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                        </select>
+                                                        @error('gender')
+                                                        <span
+                                                            class="invalid-feedback"
+                                                            role="alert">
+                                                                                                     <strong>{{ $message }}</strong>
+                                                                                                </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="address"
+                                                           class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
+
+                                                    <div class="col-6 col-md-6">
+                                                        <input id="address"
+                                                               type="text"
+                                                               class="form-control @error('address') is-invalid @enderror"
+                                                               name="address"
+                                                               value="{{ old('address') }}"
+                                                               required
+                                                               autocomplete="address"
+                                                               autofocus>
+
+                                                        @error('address')
+                                                        <span
+                                                            class="invalid-feedback"
+                                                            role="alert">
+                                                                                                     <strong>{{ $message }}</strong>
+                                                                                                </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group row">
+                                                    <label for="password"
+                                                           class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                                                    <div class="col-md-6">
+                                                        <input id="password"
+                                                               type="password"
+                                                               class="form-control @error('password') is-invalid @enderror"
+                                                               name="password"
+                                                               required
+                                                               autocomplete="new-password">
+
+                                                        @error('password')
+                                                        <span
+                                                            class="invalid-feedback"
+                                                            role="alert">
+                                                                                                       <strong>{{ $message }}</strong>
+                                                                                                 </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label
+                                                        for="password-confirm"
+                                                        class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                                                    <div class="col-md-6">
+                                                        <input
+                                                            id="password-confirm"
+                                                            type="password"
+                                                            class="form-control"
+                                                            name="password_confirmation"
+                                                            required
+                                                            autocomplete="new-password">
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="form-group row mb-0">
+                                                    <div
+                                                        class="col-md-6 offset-md-4">
+                                                        <button type="submit"
+                                                                class="btn btn-primary">
+                                                            {{ __('Register') }}
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
                         @endif
                     </li>
                 @else
@@ -353,12 +694,20 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                   style="display: none;">
                                 @csrf
@@ -366,6 +715,10 @@
                         </div>
                     </li>
                 @endguest
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
             </div>
             <nav class="main-menu mobile-menu">
                 <ul>
@@ -424,6 +777,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </div>
     <div class="copyright">
         <div class="container">
@@ -452,6 +806,38 @@
             </div>
         </div>
     </div>
+=======
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <ul>
+                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Rooms</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-lg-12 ">
+                    <div class="small text-white text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                                                            aria-hidden="true"></i> by <a
+                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
 </footer>
 </body>
 

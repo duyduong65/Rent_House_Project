@@ -21,48 +21,40 @@ class UsersTableSeeder extends Seeder
         $user->idCard = 123456789;
         $user->gender = 'male';
         $user->address = '12 Lạc Trung, Hai Bà Trưng, Hà Nội';
-        $user->image = 'asset/public/images/osz__size__.jpg';
-        $user->role = 2;
         $user->save();
 
 
         $user = new User();
         $user->name = 'Trần Thanh Hà';
-        $user->email = 'hao890@gmail.com';
+        $user->email = 'guest1@gmail.com';
         $user->phone = '0988746356';
         $user->password = \Illuminate\Support\Facades\Hash::make('12345678');
         $user->dob = '1990/09/23';
         $user->idCard = 123456798;
         $user->gender = 'female';
         $user->address = '34 Lạc Trung, Hai Bà Trưng, Hà Nội';
-        $user->image = 'asset/public/images/osz__size__.jpg';
-        $user->role = 2;
         $user->save();
 
         $user = new User();
         $user->name = 'Nguyễn Nam';
-        $user->email = 'guest1@gmail.com';
+        $user->email = 'guest2@gmail.com';
         $user->phone = '0988746356';
         $user->password = \Illuminate\Support\Facades\Hash::make('12345678');
         $user->dob = '1990/10/12';
         $user->idCard = 123453389;
         $user->gender = 'male';
         $user->address = '44 Lạc Trung, Hai Bà Trưng, Hà Nội';
-        $user->image = 'asset/public/images/osz__size__.jpg';
-        $user->role = 1;
         $user->save();
 
         $user = new User();
         $user->name = 'Hoàng Thùy Linh';
-        $user->email = 'Linh987@gmail.com';
+        $user->email = 'guest3@gmail.com';
         $user->phone = '0988746356';
-        $user->password = 'avvhg12345';
+        $user->password = \Illuminate\Support\Facades\Hash::make('12345678');
         $user->dob = '1990/12/12';
         $user->idCard = 123433789;
         $user->gender = 'male';
         $user->address = '25 Lạc Trung, Hai Bà Trưng, Hà Nội';
-        $user->image = 'asset/public/images/osz__size__.jpg';
-        $user->role = 2;
         $user->save();
     }
 }

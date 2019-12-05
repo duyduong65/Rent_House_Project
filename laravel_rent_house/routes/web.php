@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,3 +31,4 @@ Route::prefix('houses')->group(function () {
     Route::get('{id}/delete}', 'HouseController@destroy')->name('houses.delete');
     Route::get('search', 'HouseController@search')->name('houses.search');
 });
+

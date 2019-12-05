@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
     <!-- Hero Area Section Begin -->
     <section class="hero-area set-bg" data-setbg="{{asset('storage/img/hero-bg.jpg')}}">
         <div class="container">
