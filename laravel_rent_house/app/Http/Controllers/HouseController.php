@@ -88,6 +88,5 @@ class HouseController extends Controller
 
     public function search()
     {
-
     }
 }
