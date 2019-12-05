@@ -24,8 +24,6 @@ class CreateUsersTable extends Migration
             $table->integer('idCard');
             $table->string('gender');
             $table->string('address');
-            $table->string('image');
-            $table->string('role');
             $table->rememberToken();
             $table->timestamps();
         });
