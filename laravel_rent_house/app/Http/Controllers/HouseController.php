@@ -5,17 +5,21 @@ namespace App\Http\Controllers;
 use App\City;
 use App\House;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class HouseController extends Controller
 {
+    public function __construct()
+    {
+    }
+
     public function index()
     {
         $house = House::paginate();
-        dd($house);
     }
-
     public function create()
     {
+        return view('house.formAdd');
     }
 
     public function add(Request $request)
@@ -23,15 +27,10 @@ class HouseController extends Controller
         $house = new House();
         $house->name = $request->name;
         if (!$request->hasFile("image")) {
-
             $house->image = $request->image;
-
         } else {
-
             $image = $request->file("image");
-
             $path = $image->store("images", "public");
-
             $house->image = $path;
         }
         $house->address = $request->address;
@@ -57,15 +56,10 @@ class HouseController extends Controller
         $house = House::findOrFail($id);
         $house->name = $request->name;
         if (!$request->hasFile("image")) {
-
             $house->image = $request->image;
-
         } else {
-
             $image = $request->file("image");
-
             $path = $image->store("images", "public");
-
             $house->image = $path;
         }
         $house->address = $request->address;
@@ -89,4 +83,5 @@ class HouseController extends Controller
     public function search()
     {
     }
+
 }
