@@ -11,11 +11,11 @@ class HouseController extends Controller
     public function index()
     {
         $house = House::paginate();
+        dd($house);
     }
 
     public function create()
     {
-
     }
 
     public function add(Request $request)
@@ -49,6 +49,7 @@ class HouseController extends Controller
     {
         $house = House::findOrFail($id);
         $cities = City::all();
+        dd($house, $cities);
     }
 
     public function update(Request $request, $id)
