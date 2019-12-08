@@ -62,7 +62,7 @@
                     <div class="col-6 col-md-6">
                         <input id="widthInput" type="date" class="form-control @error('dob') is-invalid @enderror"
                                name="dob"
-                               value="{{$user->dob }}" required autocomplete="dob" autofocus>
+                               value="{{\Carbon\Carbon::createFromDate($user->dob)->format('Y-m-d')}}" required autocomplete="dob" autofocus>
                         @error('dob')
                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                         @enderror

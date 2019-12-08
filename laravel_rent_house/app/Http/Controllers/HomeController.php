@@ -44,7 +44,7 @@ class HomeController extends Controller
         return $validator;
     }
 
-    public function ChangePasword(Request $request)
+    public function ChangePassword(Request $request)
     {
         if (Auth::check()) {
             $request_data = $request->All();

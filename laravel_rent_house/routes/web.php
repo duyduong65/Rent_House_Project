@@ -21,7 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::post('change-password', 'HomeController@ChangePasword')->name('changePassword');
+Route::post('change-password', 'HomeController@ChangePassword')->name('changePassword');
 Route::get('editProfile/{id}', 'HomeController@editProfile')->name('editProfile');
 Route::post('updateProfile/{id}', 'HomeController@updateProfile')->name('updateProfile');
 
