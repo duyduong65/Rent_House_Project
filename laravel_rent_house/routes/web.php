@@ -11,10 +11,27 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::post('change-password', 'HomeController@ChangePasword')->name('changePassword');
+Route::get('editProfile/{id}', 'HomeController@editProfile')->name('editProfile');
+Route::post('updateProfile/{id}', 'HomeController@updateProfile')->name('updateProfile');
+
+
+Route::prefix('houses')->group(function () {
+    Route::get('/', 'HouseController@index')->name('houses.index');
+    Route::get('create', 'HouseController@create')->name('houses.create');
+    Route::post('add', 'HouseController@add')->name('houses.add');
+    Route::get('{id}/edit', 'HouseController@edit')->name('houses.edit');
+    Route::post('{id}/update', 'HouseController@update')->name('houses.update');
+    Route::get('{id}/delete}', 'HouseController@destroy')->name('houses.delete');
+    Route::get('search', 'HouseController@search')->name('houses.search');
+});
