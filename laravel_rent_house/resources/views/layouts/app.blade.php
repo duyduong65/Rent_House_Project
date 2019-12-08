@@ -150,8 +150,7 @@
                                             <button type="button" class="close"
                                                     data-dismiss="modal"
                                                     aria-label="Close">
-                                                                                        <span
-                                                                                            aria-hidden="true">&times;</span>
+                                                <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
@@ -178,8 +177,8 @@
                                                         <span
                                                             class="invalid-feedback"
                                                             role="alert">
-                                                                                                     <strong>{{ $message }}</strong>
-                                                                                                </span>
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
                                                         @enderror
                                                     </div>
                                                 </div>
@@ -296,8 +295,8 @@
                                                         <span
                                                             class="invalid-feedback"
                                                             role="alert">
-                                                                                                     <strong>{{ $message }}</strong>
-                                                                                                </span>
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
                                                         @enderror
                                                     </div>
                                                 </div>
@@ -398,6 +397,8 @@
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
+                            <a class="dropdown-item" href="{{route('editProfile',\Illuminate\Support\Facades\Auth::user()->id)}}">Edit Profile</a>
+                            <a data-target="#exampleModal_1" data-toggle="modal" class="dropdown-item" href="">Change Password</a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                   style="display: none;">
@@ -411,7 +412,7 @@
             <nav class="main-menu mobile-menu">
                 <ul>
                     <li class="active"><a href="{{route('home')}}">Home</a></li>
-                    <li><a href="./about-us.html">About</a></li>
+                    <li><a href="./about-us.html">Houses</a></li>
                     <li><a href="rooms.html">Rooms</a></li>
                     <li><a href="#">Pages</a>
                         <ul class="drop-menu">
@@ -421,7 +422,7 @@
                         </ul>
                     </li>
                     <li><a href="./blog.html">News</a></li>
-                    <li><a href="">Đăng Nhà</a></li>
+                    <li><a href="{{route('houses.create')}}">Upload House <i class="fa fa-upload" style="font-size:30px;color:red"></i></a></li>
                 </ul>
             </nav>
             <div id="mobile-menu-wrap"></div>
@@ -496,6 +497,69 @@
         </div>
     </div>
 </footer>
+
+<div class="modal fade" id="exampleModal_1" data-backdrop="false" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 style="font-weight: bold; font-size: 20px" class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{{ route('changePassword') }}">
+                    @csrf
+
+                    <div class="form-group row">
+                        <label  class="col-md-4 col-form-label text-md-right">Old Password</label>
+                        <div class="col-md-6">
+                            <input id="passwordOld" name="passwordOld" type="password" class="form-control" required  autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">New Password</label>
+                        <div class="col-md-6">
+                            <input id="passwordNew1" type="password"
+                                   class="form-control @error('password') is-invalid @enderror"
+                                   name="passwordNew1" required autocomplete="current-password">
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Re-enter Password</label>
+                            <div class="col-md-6">
+                                <input id="passwordNew2" type="password"
+                                       class="form-control @error('password') is-invalid @enderror"
+                                       name="passwordNew2" required autocomplete="current-password">
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                @enderror
+                        </div>
+                    </div>
+                    <div class="form-group row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                            <button type="submit" class="btn btn-success">
+                                Change
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 <script src="{{asset('storage/js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('storage/js/jquery.magnific-popup.min.js')}}"></script>

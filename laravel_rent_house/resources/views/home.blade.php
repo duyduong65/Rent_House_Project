@@ -1,16 +1,16 @@
 @extends('layouts.app')
 @section('content')
-<<<<<<< HEAD
+{{--<<<<<<< HEAD--}}
 
-=======
->>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493
+{{--=======--}}
+{{-->>>>>>> 6370d6086dd316c3c6bf4158117a86fc1839d493--}}
     <!-- Hero Area Section Begin -->
-    <section class="hero-area set-bg" data-setbg="{{asset('storage/img/hero-bg.jpg')}}">
+    <section class="hero-area set-bg" data-setbg="{{asset('storage/img/1.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="hero-text">
-                        <h1>A Luxury Stay</h1>
+                        <h1>A Luxury Rent House </h1>
                     </div>
                 </div>
             </div>

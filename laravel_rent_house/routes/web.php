@@ -21,6 +21,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::post('change-password', 'HomeController@ChangePasword')->name('changePassword');
+Route::get('editProfile/{id}', 'HomeController@editProfile')->name('editProfile');
+Route::post('updateProfile/{id}', 'HomeController@updateProfile')->name('updateProfile');
+
 
 Route::prefix('houses')->group(function () {
     Route::get('/', 'HouseController@index')->name('houses.index');

@@ -9,17 +9,22 @@ use Illuminate\Support\Facades\File;
 
 class HouseController extends Controller
 {
-    public function __construct()
+    protected $city;
+
+    public function __construct(City $city)
     {
+        $this->city = $city;
     }
 
     public function index()
     {
         $house = House::paginate();
     }
+
     public function create()
     {
-        return view('house.formAdd');
+        $cities = $this->city->all();
+        return view('house.formAdd', compact('cities'));
     }
 
     public function add(Request $request)
@@ -42,6 +47,7 @@ class HouseController extends Controller
         $house->price = $request->price;
         $house->city_id = $request->city_id;
         $house->save();
+        return redirect()->route('home');
     }
 
     public function edit($id)
