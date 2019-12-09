@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <body style="background: url({{url('storage/img/hero-bg.jpg')}}); background-size: cover">
     <div class="container mt-5">
         <div class="card bg-light mb-3" style="max-width: 100%;">
             <div class="card-header">
@@ -99,5 +100,5 @@
             </form>
         </div>
     </div>
-
+    </body>
 @endsection

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Request;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -13,7 +13,7 @@ class HouseRequestValidate extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -37,8 +37,5 @@ class HouseRequestValidate extends FormRequest
         ];
     }
 
-    public function messages()
-    {
 
-    }
 }
