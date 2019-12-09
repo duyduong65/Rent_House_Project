@@ -32,7 +32,7 @@ class SocialAuthController extends Controller
                 $user->name = $fbUser->user['name'];
                 $user->password = Hash::make($fbUser->user['name']);
                 $user->email = $email;
-                $user->phone = '0397487203';
+                $user->phone ='0397487203';
                 $user->idCard = '125654497';
                 $user->dob = '1996/12/26';
                 $user->gender = 'male';
