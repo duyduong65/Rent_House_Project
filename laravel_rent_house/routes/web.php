@@ -25,6 +25,9 @@ Route::post('change-password', 'HomeController@ChangePassword')->name('changePas
 Route::get('editProfile/{id}', 'HomeController@editProfile')->name('editProfile');
 Route::post('updateProfile/{id}', 'HomeController@updateProfile')->name('updateProfile');
 
+Route::get('/redirect/{social}', 'SocialAuthController@redirect');
+Route::get('/callback/{social}', 'SocialAuthController@callback');
+
 
 Route::prefix('houses')->group(function () {
     Route::get('/', 'HouseController@index')->name('houses.index');

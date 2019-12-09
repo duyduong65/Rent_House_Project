@@ -112,10 +112,17 @@
                                             </div>
 
                                             <div class="form-group row mb-0">
-                                                <div class="col-md-8 offset-md-4">
-                                                    <button type="submit" class="btn btn-primary">
-                                                        {{ __('Login') }}
-                                                    </button>
+                                                <div class="col-md-8 offset-md-4 row">
+                                                    <div class="col-6 col-md-6">
+                                                        <button type="submit" class="btn btn-primary">
+                                                            {{ __('Login') }}
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-6 col-md-6">
+                                                        <a href="redirect/facebook">
+                                                            <img src="https://img.icons8.com/doodle/30/000000/facebook-new.png">
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
