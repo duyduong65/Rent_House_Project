@@ -10,11 +10,14 @@ use Illuminate\Support\Facades\File;
 class HouseController extends Controller
 {
     protected $city;
+    protected $house;
 
-    public function __construct(City $city)
+    public function __construct(City $city,
+                                House $house)
     {
         $this->middleware('auth');
         $this->city = $city;
+        $this->house = $house;
     }
 
     public function index()
@@ -87,6 +90,12 @@ class HouseController extends Controller
 
     public function search()
     {
+    }
+
+    public function getAllHouse()
+    {
+        $houses = $this->house->all();
+        return view('house.list', compact('houses'));
     }
 
 }

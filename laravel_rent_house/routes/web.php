@@ -34,4 +34,5 @@ Route::prefix('houses')->group(function () {
     Route::post('{id}/update', 'HouseController@update')->name('houses.update');
     Route::get('{id}/delete}', 'HouseController@destroy')->name('houses.delete');
     Route::get('search', 'HouseController@search')->name('houses.search');
+    Route::get('listHouse', 'HouseController@getAllHouse')->name('houses.list');
 });

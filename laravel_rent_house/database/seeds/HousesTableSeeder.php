@@ -14,7 +14,7 @@ class HousesTableSeeder extends Seeder
     {
         $house = new House();
         $house->name = 'cho thuê nhà nguyên căn';
-        $house->image = 'http://baohagiang.vn/dataimages/201808/original/images1414227_HA_GIANG.jpg';
+        $house->image = 'img/rooms/room-1.jpg';
         $house->kindHouse = 'Home Stay';
         $house->kindRoom = 'Phòng đôi';
         $house->address = 'Mỹ Khê, Đà Nẵng';
@@ -27,7 +27,7 @@ class HousesTableSeeder extends Seeder
 
         $house = new House();
         $house->name = 'The Vietnam Hotel';
-        $house->image = 'http://baohagiang.vn/dataimages/201808/original/images1414227_HA_GIANG.jpg';
+        $house->image = 'img/rooms/room-2.jpg';
         $house->kindHouse = 'Home Stay';
         $house->kindRoom = 'Phòng đôi';
         $house->address = 'Sông Hàn, Đà Nẵng';
@@ -40,7 +40,7 @@ class HousesTableSeeder extends Seeder
 
         $house = new House();
         $house->name = 'Little Charm Ha Noi Hotel';
-        $house->image = 'http://baohagiang.vn/dataimages/201808/original/images1414227_HA_GIANG.jpg';
+        $house->image = 'img/rooms/room-3.jpg';
         $house->kindHouse = 'Home Stay';
         $house->kindRoom = 'Phòng đôi';
         $house->address = 'Hoàn Kiếm, Hà Nội';
@@ -53,7 +53,7 @@ class HousesTableSeeder extends Seeder
 
         $house = new House();
         $house->name = 'Aeron Hotel';
-        $house->image = 'http://baohagiang.vn/dataimages/201808/original/images1414227_HA_GIANG.jpg';
+        $house->image = 'img/rooms/room-4.jpg';
         $house->kindHouse = 'Home Stay';
         $house->kindRoom = 'Phòng đôi';
         $house->address = 'Nha Trang Beach, Nha Trang';
@@ -64,4 +64,6 @@ class HousesTableSeeder extends Seeder
         $house->city_id = 4;
         $house->save();
     }
+
+
 }
