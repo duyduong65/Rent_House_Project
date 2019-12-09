@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
         <div class="card bg-light mb-3" style="max-width: 100%;">
             <div class="card-header">
                 <p style="text-align: center;font-size: 60px;font-weight: bold;font-family: 'Apple Color Emoji';color: blueviolet; padding-top: 10px">
@@ -9,7 +9,7 @@
             </div>
             <form method="POST" action="{{route('updateProfile', $user->id)}}">
                 @csrf
-                <div class="form-group row">
+                <div class="form-group row mt-3">
                     <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
                     <div class="col-6 col-md-6">
                         <input id="widthInput" type="text" class="form-control @error('name') is-invalid @enderror"

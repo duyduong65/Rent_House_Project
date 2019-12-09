@@ -39,27 +39,6 @@ class HouseRequestValidate extends FormRequest
 
     public function messages()
     {
-        return [
-            //message validate name
-            'name.required' => 'Không được để trống',
-            'name.min' => 'Tên quá ngắn',
-            'name.max' => 'Tên không hợp lệ!',
-            //message validate image
-            'image.required' => 'Không được để trống!',
-            //message validate address
-            'address.required' => 'Không được để trống!',
-            'address.min' => 'Không hợp lệ!',
-            'address.max' => 'Không hợp lệ!',
-            //message validate Kindhouse,, kindRoom, numBedRoom, numBathroom, description
-            'kindHouse.required' => 'không được để trống!',
-            'kindRoom.required' => 'không được để trống!',
-            'numBedroom.required' => 'không được để trống!',
-            'numBathroom.required' => 'không được để trống!',
-            'description.required' => 'không được để trống!',
-            'description.min' => 'nội dung quá ngắn!',
-            //message validate price, city_id
-            'price.required' => 'không được để trống!',
-            'city_id.required' => 'không được để trống!',
-        ];
+
     }
 }

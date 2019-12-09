@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-4">
     <body style="background: url({{url('storage/img/hero-bg.jpg')}}); background-size: cover">
     <div class="row justify-content-center">
         <div class="col-md-8">

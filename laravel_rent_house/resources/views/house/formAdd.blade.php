@@ -2,7 +2,7 @@
 @section('content')
 
     <body style="background: url({{url('storage/img/hero-bg.jpg')}}); background-size: cover">
-    <div class="main">
+    <div class="main mt-5">
         <div class="container">
             <div class="card bg-light mb-3" style="max-width: 100%;">
                 <div class="card-header">

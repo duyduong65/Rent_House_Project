@@ -429,7 +429,7 @@
     </div>
 </header>
 <!-- Header End -->
-<main class="py-4">
+<main class="py-4" style="margin-top: -31px">
     @yield('content')
 </main>
 <footer class="footer-section">
