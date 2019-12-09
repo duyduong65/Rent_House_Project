@@ -199,8 +199,8 @@
                                                         <span
                                                             class="invalid-feedback"
                                                             role="alert">
-                                                                                                   <strong>{{ $message }}</strong>
-                                                                                              </span>
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
                                                         @enderror
                                                     </div>
                                                 </div>
@@ -218,13 +218,16 @@
                                                                required
                                                                autocomplete="phone"
                                                                autofocus>
+                                                        @if($errors->has('phone'))
+                                                            <p>{{$errors->first('phone')}}</p>
+                                                        @endif
 
                                                         @error('phone')
                                                         <span
                                                             class="invalid-feedback"
                                                             role="alert">
-                                                                                                     <strong>{{ $message }}</strong>
-                                                                                                </span>
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
                                                         @enderror
                                                     </div>
                                                 </div>
@@ -282,11 +285,12 @@
                                                            class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
 
                                                     <div class="col-6 col-md-6">
-                                                        <select class="custom-select my-1 mr-sm-2 @error('gender') is-invalid @enderror"
-                                                                name="gender"
-                                                                autocomplete="gender"
-                                                                autofocus
-                                                                id="gender">
+                                                        <select
+                                                            class="custom-select my-1 mr-sm-2 @error('gender') is-invalid @enderror"
+                                                            name="gender"
+                                                            autocomplete="gender"
+                                                            autofocus
+                                                            id="gender">
                                                             <option value="Male">Male</option>
                                                             <option value="Female">Female</option>
                                                         </select>
@@ -396,8 +400,11 @@
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            <a class="dropdown-item" href="{{route('editProfile',\Illuminate\Support\Facades\Auth::user()->id)}}">Edit Profile</a>
-                            <a data-target="#exampleModal_1" data-toggle="modal" class="dropdown-item" href="">Change Password</a>
+                            <a class="dropdown-item"
+                               href="{{route('editProfile',\Illuminate\Support\Facades\Auth::user()->id)}}">Edit
+                                Profile</a>
+                            <a data-target="#exampleModal_1" data-toggle="modal" class="dropdown-item" href="">Change
+                                Password</a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                   style="display: none;">
@@ -421,7 +428,9 @@
                         </ul>
                     </li>
                     <li><a href="./blog.html">News</a></li>
-                    <li><a href="{{route('houses.create')}}">Upload House <i class="fa fa-upload" style="font-size:30px;color:red"></i></a></li>
+                    <li><a href="{{route('houses.create')}}">Upload House <i class="fa fa-upload"
+                                                                             style="font-size:30px;color:red"></i></a>
+                    </li>
                 </ul>
             </nav>
             <div id="mobile-menu-wrap"></div>
@@ -502,7 +511,8 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 style="font-weight: bold; font-size: 20px" class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h5>
+                <h5 style="font-weight: bold; font-size: 20px" class="modal-title" id="exampleModalLabel">CHANGE
+                    PASSWORD</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -512,9 +522,10 @@
                     @csrf
 
                     <div class="form-group row">
-                        <label  class="col-md-4 col-form-label text-md-right">Old Password</label>
+                        <label class="col-md-4 col-form-label text-md-right">Old Password</label>
                         <div class="col-md-6">
-                            <input id="passwordOld" name="passwordOld" type="password" class="form-control" required  autofocus>
+                            <input id="passwordOld" name="passwordOld" type="password" class="form-control" required
+                                   autofocus>
                         </div>
                     </div>
 
@@ -533,16 +544,16 @@
                     </div>
 
                     <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Re-enter Password</label>
-                            <div class="col-md-6">
-                                <input id="passwordNew2" type="password"
-                                       class="form-control @error('password') is-invalid @enderror"
-                                       name="passwordNew2" required autocomplete="current-password">
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Re-enter Password</label>
+                        <div class="col-md-6">
+                            <input id="passwordNew2" type="password"
+                                   class="form-control @error('password') is-invalid @enderror"
+                                   name="passwordNew2" required autocomplete="current-password">
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                                @enderror
+                            @enderror
                         </div>
                     </div>
                     <div class="form-group row mb-0">

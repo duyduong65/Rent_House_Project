@@ -13,7 +13,7 @@ class UserRequestValidate extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,10 +24,10 @@ class UserRequestValidate extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:2|max:30',
-            'email' => 'required',
-            'password' => 'required|min:8|max:12',
-            'phone' => 'required|min:10|max:10',
+            'name' => 'required|string|min:2|max:30',
+            'email' => 'required|unique:email|regex:/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/|',
+            'password' => 'required|min:8|max:16',
+            'phone' => 'required|numeric|size:10|regex:/(01)[0-9]{9}/',
             'dob' => 'required',
             'idCard' => 'required|min:8|max:12',
             'gender' => 'required',
