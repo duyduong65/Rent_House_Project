@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\City;
 use App\House;
-use Illuminate\Http\Request;
+use App\Http\Requests\HouseRequestValidate;
 use Illuminate\Support\Facades\File;
 
 class HouseController extends Controller
@@ -28,7 +28,7 @@ class HouseController extends Controller
         return view('house.formAdd', compact('cities'));
     }
 
-    public function add(Request $request)
+    public function add(HouseRequestValidate $request)
     {
         $house = new House();
         $house->name = $request->name;

@@ -51,14 +51,18 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:3',
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'phone' => ['required', 'min:9', ''],
-            'idCard' => ['required', 'min:9', 'max:12'],
-            'dob' => ['required'],
-            'gender' => ['required'],
-            'address' => ['required', 'string'],
-        ]);
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+            'phone' => 'required|min:9',
+            'idCard' => 'required|min:9|max:12',
+            'dob' => 'required',
+            'gender' => 'required',
+            'address' => 'required|string'],
+            [
+                'email.required' => 'Không được để trống.',
+                'email.email' => 'The email needs to have a valid format.',
+                'email.exists' => 'The email is not registered in the system.',
+            ]);
     }
 
     /**

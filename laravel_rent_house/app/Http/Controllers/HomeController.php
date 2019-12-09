@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\UserRequestValidate;
+
 
 class HomeController extends Controller
 {
@@ -75,7 +77,7 @@ class HomeController extends Controller
         return view('user.formEdit', compact('user'));
     }
 
-    public function updateProfile(Request $request,$id)
+    public function updateProfile(UserRequestValidate $request,$id)
     {
         $user = User::findOrFail($id);
         $user->name = $request->name;
