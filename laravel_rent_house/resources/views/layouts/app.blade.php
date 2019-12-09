@@ -419,11 +419,11 @@
                 <ul>
                     <li class="active"><a href="{{route('home')}}">Home</a></li>
                     <li><a href="./about-us.html">Houses</a></li>
-                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="{{route('houses.list')}}">Rooms</a></li>
                     <li><a href="#">Pages</a>
                         <ul class="drop-menu">
                             <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="rooms.html">Rooms</a></li>
+                            <li><a href="">Rooms</a></li>
                             <li><a href="services.html">Services</a></li>
                         </ul>
                     </li>
