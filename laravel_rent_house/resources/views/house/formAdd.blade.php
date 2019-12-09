@@ -2,14 +2,14 @@
 @section('content')
 
     <br><br><br><br><br><br>
-<body style="background: url({{url('storage/img/hero-bg.jpg')}}); background-size: cover">
+    <body style="background: url({{url('storage/img/hero-bg.jpg')}}); background-size: cover">
     <div class="main">
         <div class="container">
             <div class="card bg-light mb-3" style="max-width: 100%;">
                 <div class="card-header">
                     <p class="newhouses"> NEW HOUSES</p>
                 </div>
-                <form method="POST" action="{{route('houses.add')}}">
+                <form method="POST" action="{{route('houses.add')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-lg-5 offset-1">
@@ -72,7 +72,8 @@
                             </div>
                             <div class="form-group">
                                 <label class="label" for="exampleInputEmail1">PRICE :</label>
-                                <input type="number" name="price" placeholder="Enter Price" class="form-control" id="exampleInputEmail1"
+                                <input type="number" name="price" placeholder="Enter Price" class="form-control"
+                                       id="exampleInputEmail1"
                                        aria-describedby="emailHelp">
                             </div>
                             <div class="form-group">
@@ -86,12 +87,12 @@
                     </div>
                     <div style="text-align: right; padding-right: 100px">
                         <button style="width: 80px" type="submit" class="btn btn-primary">UP</button>
-                        <a class="btn btn-dark" href="{{route('home')}}" >CANCEL</a>
+                        <a class="btn btn-dark" href="{{route('home')}}">CANCEL</a>
                     </div>
                 </form>
             </div>
         </div>
 
     </div>
-</body>
+    </body>
 @endsection

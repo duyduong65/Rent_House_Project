@@ -29,13 +29,9 @@ class HouseController extends Controller
 
     public function add(Request $request)
     {
-        dd($request->file('image'));
         $house = new House();
         $house->name = $request->name;
-        if ($request->image = null) {
-            $house->image = $request->image;
-        } else {
-            dd($request->file('image'));
+        if ($request->hasFile('image')) {
             $image = $request->file("image");
             $path = $image->store("img", "public");
             $house->image = $path;
