@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <body style="background: url({{url('storage/img/hero-bg.jpg')}}); background-size: cover">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

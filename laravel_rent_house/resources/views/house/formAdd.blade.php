@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    <br><br><br><br><br><br>
     <body style="background: url({{url('storage/img/hero-bg.jpg')}}); background-size: cover">
     <div class="main">
         <div class="container">

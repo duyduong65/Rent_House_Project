@@ -13,6 +13,7 @@ class HouseController extends Controller
 
     public function __construct(City $city)
     {
+        $this->middleware('auth');
         $this->city = $city;
     }
 

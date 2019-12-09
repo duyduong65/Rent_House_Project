@@ -11,7 +11,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -430,7 +429,7 @@
     </div>
 </header>
 <!-- Header End -->
-<main class="py-4">
+<main class="py-4" style="margin-top: -31px">
     @yield('content')
 </main>
 <footer class="footer-section">

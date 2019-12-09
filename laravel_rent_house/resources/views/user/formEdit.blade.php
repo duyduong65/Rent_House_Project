@@ -1,7 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    <br><br><br><br><br><br>
-
     <div class="container">
         <div class="card bg-light mb-3" style="max-width: 100%;">
             <div class="card-header">
