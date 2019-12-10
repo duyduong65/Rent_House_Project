@@ -44,9 +44,9 @@
                                     <div class="form-group">
                                         <label class="label" for="exampleInputEmail1">KIND OF HOUSE :</label>
                                         <select class="form-control" name="kindHouse">
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
+                                            <option>Home Stay</option>
+                                            <option>Hotel</option>
+                                            <option>Family Home</option>
                                         </select>
                                     </div>
                                     @if($errors->has('kindHouse'))
