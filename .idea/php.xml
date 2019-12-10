@@ -89,6 +89,14 @@
       <path value="$PROJECT_DIR$/Laravel_Rent_House/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/Laravel_Rent_House/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/Laravel_Rent_House/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/laravel_rent_house/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/laravel_rent_house/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/laravel_rent_house/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/laravel_rent_house/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/laravel_rent_house/vendor/facebook/graph-sdk" />
+      <path value="$PROJECT_DIR$/laravel_rent_house/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/laravel_rent_house/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/laravel_rent_house/vendor/laravel/socialite" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

@@ -6,7 +6,15 @@
       <sourceFolder url="file://$MODULE_DIR$/laravel_rent_house/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/Laravel_Rent_House/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/facebook/graph-sdk" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/laravel/socialite" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/league/oauth1-client" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel_rent_house/vendor/ralouphie/getallheaders" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
