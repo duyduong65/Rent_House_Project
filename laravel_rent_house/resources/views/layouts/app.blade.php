@@ -399,54 +399,53 @@
 
                 @else
                     <div style="margin-top: -15px">
-                    <li class="nav-item dropdown">
-            </div>
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->name }} <span class="caret"></span>
-            </a>
+                        <li class="nav-item dropdown">
+                    </div>
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
 
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-                <a class="dropdown-item"
-                   href="{{route('editProfile',\Illuminate\Support\Facades\Auth::user()->id)}}">Edit
-                    Profile</a>
-                <a data-target="#exampleModal_1" data-toggle="modal" class="dropdown-item" href="">Change
-                    Password</a>
+                            {{ __('Logout') }}
+                        </a>
+                        <a class="dropdown-item"
+                           href="{{route('editProfile',\Illuminate\Support\Facades\Auth::user()->id)}}">Edit
+                            Profile</a>
+                        <a data-target="#exampleModal_1" data-toggle="modal" class="dropdown-item" href="">Change
+                            Password</a>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                      style="display: none;">
-                    @csrf
-                </form>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                              style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                @endguest
+
             </div>
-            </li>
-            @endguest
-
+            <nav class="main-menu mobile-menu">
+                <ul>
+                    <li class="active"><a href="{{route('home')}}">Home</a></li>
+                    <li><a href="./about-us.html">Houses</a></li>
+                    <li><a href="{{route('houses.list')}}">Rooms</a></li>
+                    <li><a href="#">Pages</a>
+                        <ul class="drop-menu">
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="">Rooms</a></li>
+                            <li><a href="services.html">Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./blog.html">News</a></li>
+                    <li><a href="{{route('houses.create')}}">Upload House <i class="fa fa-upload"
+                                                                             style="font-size:30px;color:red"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap"></div>
         </div>
-        <nav class="main-menu mobile-menu">
-            <ul>
-                <li class="active"><a href="{{route('home')}}">Home</a></li>
-                <li><a href="./about-us.html">Houses</a></li>
-                <li><a href="{{route('houses.list')}}">Rooms</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="drop-menu">
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="">Rooms</a></li>
-                        <li><a href="services.html">Services</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">News</a></li>
-                <li><a href="{{route('houses.create')}}">Upload House <i class="fa fa-upload"
-                                                                         style="font-size:30px;color:red"></i></a>
-                </li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-    </div>
     </div>
 </header>
 <!-- Header End -->
