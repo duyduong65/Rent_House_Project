@@ -42,12 +42,12 @@
             </div>
             <div class="nav-right">
                 @guest
-                    <li class="nav-item">
-                        <button type="button" data-backdrop="false" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">
-                            Login
-                        </button>
 
+                    <div style="float: left" class="mr-3 mt-3">
+                        <a href="#" data-backdrop="false" data-toggle="modal"
+                           data-target="#exampleModal">
+                            Login
+                        </a>
                         <div class="modal fade" id="exampleModal" data-backdrop="false" tabindex="-1" role="dialog"
                              aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -120,7 +120,8 @@
                                                     </div>
                                                     <div class="col-6 col-md-6">
                                                         <a href="redirect/facebook">
-                                                            <img src="https://img.icons8.com/doodle/30/000000/facebook-new.png">
+                                                            <img
+                                                                src="https://img.icons8.com/doodle/30/000000/facebook-new.png">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -130,16 +131,17 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="nav-link">
+                    </div>
+
+                    <div style="float: left" class="mt-3">
                     @if (Route::has('register'))
 
                         <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-success"
-                                    data-backdrop="false" data-toggle="modal"
-                                    data-target="#staticBackdrop">
+                            <a href="#"
+                               data-backdrop="false" data-toggle="modal"
+                               data-target="#staticBackdrop">
                                 Register
-                            </button>
+                            </a>
 
                             <!-- Modal -->
                             <div class="modal fade" id="staticBackdrop"
@@ -393,55 +395,58 @@
                                 </div>
                             </div>
                         @endif
-                    </li>
+                    </div>
+
                 @else
+                    <div style="margin-top: -15px">
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <a class="dropdown-item"
-                               href="{{route('editProfile',\Illuminate\Support\Facades\Auth::user()->id)}}">Edit
-                                Profile</a>
-                            <a data-target="#exampleModal_1" data-toggle="modal" class="dropdown-item" href="">Change
-                                Password</a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                  style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                @endguest
-
             </div>
-            <nav class="main-menu mobile-menu">
-                <ul>
-                    <li class="active"><a href="{{route('home')}}">Home</a></li>
-                    <li><a href="./about-us.html">Houses</a></li>
-                    <li><a href="{{route('houses.list')}}">Rooms</a></li>
-                    <li><a href="#">Pages</a>
-                        <ul class="drop-menu">
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="">Rooms</a></li>
-                            <li><a href="services.html">Services</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./blog.html">News</a></li>
-                    <li><a href="{{route('houses.create')}}">Upload House <i class="fa fa-upload"
-                                                                             style="font-size:30px;color:red"></i></a>
-                    </li>
-                </ul>
-            </nav>
-            <div id="mobile-menu-wrap"></div>
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }} <span class="caret"></span>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                <a class="dropdown-item"
+                   href="{{route('editProfile',\Illuminate\Support\Facades\Auth::user()->id)}}">Edit
+                    Profile</a>
+                <a data-target="#exampleModal_1" data-toggle="modal" class="dropdown-item" href="">Change
+                    Password</a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                      style="display: none;">
+                    @csrf
+                </form>
+            </div>
+            </li>
+            @endguest
+
         </div>
+        <nav class="main-menu mobile-menu">
+            <ul>
+                <li class="active"><a href="{{route('home')}}">Home</a></li>
+                <li><a href="./about-us.html">Houses</a></li>
+                <li><a href="{{route('houses.list')}}">Rooms</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="drop-menu">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="">Rooms</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">News</a></li>
+                <li><a href="{{route('houses.create')}}">Upload House <i class="fa fa-upload"
+                                                                         style="font-size:30px;color:red"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+    </div>
     </div>
 </header>
 <!-- Header End -->
